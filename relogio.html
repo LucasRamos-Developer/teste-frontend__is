@@ -10,41 +10,63 @@
 	button {position:absolute;right:5%;bottom:5%;z-index:20;border:2px solid #2980b9;background-color:#FFF;color:#2980b9;padding:15px 30px;}
 	button {font-size: 18px;text-transform:uppercase;cursor:pointer;transition:all linear .4s;}
 	button:hover{background-color:#2980b9;color:#FFF;}
-	.container-relogio{width:600px;height:600px;border:10px solid #000;border-radius:50%;position:relative;margin:0 auto;box-shadow:0px 0px 8px 2px rgba(255,255,255,0.5);transition:all linear .4s;background:#EEE;}
+	.container-relogio{width:400px;height:400px;border:40px solid #000;border-radius:50%;position:relative;margin:5% auto;box-shadow:0px 0px 8px 2px rgba(255,255,255,0.5);transition:all linear .4s;background:#EEE;}
 	.centro{width:20px;height:20px;border-radius:50%;background-color:#000;top:50%;margin-top:-10px;left:50%;margin-left:-10px;position:absolute;z-index:9;}
-	.segundo{width:2px;height:330px;background-color:#BC0A24;top:20px;left:299px;transform-origin:1px 280px;position:absolute;z-index:6;}
-	.minuto{width:6px;height:230px;background-color:#444;top:70px;left:296px;transform-origin:3px bottom;position:absolute;box-shadow:1px 1px 2px;border-radius:2px;z-index:7;}
-	.hora{width:8px;height:200px;background-color:#000;top:100px;left:296px;transform-origin:4px bottom;position:absolute;border-radius:4px;z-index:8;}
+	.segundo{width:2px;height:230px;background-color:#BC0A24;bottom:50%;margin-bottom:-30px;left:50%; margin-left:-1px; transform-origin:1px 200px;position:absolute;z-index:6;}
+	.minuto{width:6px;height:185px;background-color:#444;bottom:50%;left:50%;margin-left:-3px;transform-origin:3px bottom;position:absolute;box-shadow:1px 1px 2px;border-radius:2px;z-index:7;}
+	.hora{width:6px;border:2px solid #FFF;height:203px;background-color:#000;bottom:50%;left:50%;margin-left:-4px;tmargin-left:-3px;transform-origin:4px bottom;position:absolute;border-radius:4px;z-index:8;}
+	.hora::after {content:"";display: inline-block; position: absolute; width: 0;height: 0;border-left: 6px solid transparent;border-right: 6px solid transparent;border-bottom: 8px solid #FFF; top: 0;}
 
 	.marcadores{position:absolute;width:100%;height:100%;top:0;left:0;bottom:0;right:0;}
 	.marcadores:after{content:'';border-radius:50%;position:absolute;box-sizing:border-box;width:100%;height:100%;top:0;left:0;bottom:0;right:0;border:3px solid #FFF;}
 	.marcadores:before{content:'';position:absolute;border-radius:50%;top:15px;left:15px;bottom:15px;right:15px;background-color:#FFF;z-index:1;}
 	.marcadores span{width:1px;height:100%;top:0;bottom:0;left:50%;right:50%;background-color:#CCC;position:absolute;}
 	.marcadores span.bold{width:2px;background-color:#000;margin-left:-1px;}
-	.marcadores em{position:absolute;z-index:3;font-style:normal;font-weight:bold;}
-	.marcadores em.num-1{top: 55px; left: 428px;}
-	.marcadores em.num-2{top: 157px; left: 531px;}
-	.marcadores em.num-3{top: 292px; left: 567px;}
-	.marcadores em.num-4{top: 426px; left: 531px;}
-	.marcadores em.num-5{top: 529px; left: 428px;}
-	.marcadores em.num-6{top: 568px; left: 293px;}
-	.marcadores em.num-7{top: 529px; left: 158px;}
-	.marcadores em.num-8{top: 428px; left: 55px;}
-	.marcadores em.num-9{top: 292px; left: 18px;}
-	.marcadores em.num-10{top: 154px; left: 55px;}
-	.marcadores em.num-11{top: 55px; left: 158px;}
-	.marcadores em.num-12{top: 15px; left: 293px;}
+	.marcadores em{position:absolute;z-index:3;font-style:normal;font-weight:bold;font-size:10px;color:#444;}
+	.marcadores em.num-15{top: 196px; left: 375px;}
+	.marcadores em.num-30{top: 370px; left: 196px;}
+	.marcadores em.num-45{top: 196px; left: 20px;}
+	.marcadores em.num-60{top: 20px; left: 196px;}
 
+	.mark-24h {position:absolute;width:100%;height:100%;top:0;left:0;bottom:0;right:0;font-family:sans-serif;color:#FFF;}
+	.mark-24h strong {font-size:24px;font-weight:bold;position:absolute;z-index:4;}
+	.mark-24h strong.num-1 {top: 402px; left: 133px;}
+	.mark-24h strong.num-2 {top: 382px; left: 83px;}
+	.mark-24h strong.num-3 {top: 347px; left: 33px;}
+	.mark-24h strong.num-4 {top: 304px; left: -3px;}
+	.mark-24h strong.num-5 {top: 251px; left: -23px;}
+	.mark-24h strong.num-6 {top: 190px; left: -33px;}
+	.mark-24h strong.num-7 {top: 132px; left: -23px;}
+	.mark-24h strong.num-8 {top: 80px; left: -3px;}
+	.mark-24h strong.num-9 {top: 35px; left: 33px;}
+	.mark-24h strong.num-10 {top: -3px; left: 83px;}
+	.mark-24h strong.num-11 {top: -23px; left: 133px;}
+	.mark-24h strong.num-12 {top: -30px; left: 188px;}
+	.mark-24h strong.num-13 {top: -23px; left: 242px;}
+	.mark-24h strong.num-14 {top: -3px; left: 292px;}
+	.mark-24h strong.num-15 {top: 35px; left: 342px;}
+	.mark-24h strong.num-16 {top: 80px; left: 378px;}
+	.mark-24h strong.num-17 {top: 132px; right: -23px;}
+	.mark-24h strong.num-18 {top: 190px; right: -33px;}
+	.mark-24h strong.num-19 {top: 251px; right: -23px;}
+	.mark-24h strong.num-20 {top: 304px; left: 378px;}
+	.mark-24h strong.num-21 {top: 347px; left: 342px;}
+	.mark-24h strong.num-22 {top: 382px; left: 292px;}
+	.mark-24h strong.num-23 {top: 403px; left: 242px;}
+	.mark-24h strong.num-24 {top: 410px; left: 188px;}
 </style>
 <body>
 	<div class="container-relogio" id="relogio">
 		<div class="relogio">
 			<div class="marcadores">
 				<div id="mark">
-					
+
 				</div>
 				<div id="number">
-					
+					<em class="num-15">15</em>
+					<em class="num-30">30</em>
+					<em class="num-45">45</em>
+					<em class="num-60">60</em>
 				</div>
 			</div>
 			<div id="s" class="segundo"></div>
@@ -52,6 +74,7 @@
 			<div id="h" class="hora"></div>
 		    <div class="centro"></div>
 		</div>
+		<div id="number-24h" class="mark-24h"></div>
 	</div>
 	<button id="action">Ocultar Relógio</button>
 	<script type="text/javascript">
@@ -61,33 +84,41 @@
 			for (var i = 0; i < controller_sec; i++) {
 				var  span = document.createElement("span");
 				var rotate = i*6;
-				if (i % 5 == 0) {
-					span.classList.add('bold');
-				}
-
 				span.style.transform = "rotate("+rotate+"deg)";
 				element.appendChild(span);
 			}
-			controller_sec = 12;
-			var num = document.getElementById("number");
+			controller_sec = 24;
+			var num_24 = document.getElementById("number-24h");
 			for (var i = 1; i <= controller_sec; i++) {
-				var  em = document.createElement("em");
+				var  strong = document.createElement("strong");
 				if (i < 10) {
-					em.innerHTML = "0" + i;
+					strong.innerHTML = "0" + i;
 				} else {
-					em.innerHTML = i;
+					strong.innerHTML = i;
 				}
-				em.classList.add('num-' + i);
-				num.appendChild(em);
+
+				if (i <= 12) {
+					var rotate = i*15;
+					var  span = document.createElement("span");
+					span.style.transform = "rotate("+rotate+"deg)";
+					span.classList.add('bold');
+					element.appendChild(span);
+				}
+
+				strong.classList.add('num-' + i);
+				num_24.appendChild(strong);
 			}
+
 		};
 		var count_time = function(){
 			var tempo = new Date();
-			
+
 			var s = tempo.getSeconds() * 6;
 			var m = tempo.getMinutes() * 6 + s/60;
-			var h = tempo.getHours() * 30 + m/12;
-			
+			var h = (tempo.getHours() * 15 + m/24) - 180;
+
+			console.log(h);
+
    			var rot_s = "rotate(" + s + "deg)";
 			var rot_m = "rotate(" + m + "deg)";
 			var rot_h = "rotate(" + h + "deg)";
